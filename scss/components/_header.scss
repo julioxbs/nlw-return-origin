@@ -1,0 +1,41 @@
+header {
+    background-color: var(--clr-brand-light);
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon-menu {
+            display: none;
+        }
+
+        .list-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            a {
+                color: var(--clr-brand-green);
+                font-size: 16px;
+                line-height: 21px;
+                
+                &.active {
+                    font-weight: bold;
+                    color: var(--clr-brand-green-hover);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .list-menu,
+    .secondary {
+        display: none !important;
+    }
+
+    .icon-menu {
+        display: block !important;
+    }
+}

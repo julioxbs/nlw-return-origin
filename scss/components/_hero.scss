@@ -1,0 +1,121 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem;
+    position: relative;
+    padding-bottom: 4rem;
+    
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 7rem;
+
+        .welcome-message {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: var(--clr-brand-green);
+        }
+
+        .title-hero {
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 44.2px;
+            color: var(--clr-gray-headline);
+            
+            @media only screen and (min-width: 768px) {
+                font-size: 50px;
+                line-height: 67.6px;
+            }
+        }
+
+        .subtitle-hero {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            color: var(--clr-gray-parapraph);
+            max-width: 38rem;
+            width: 100%;
+        }
+
+        .primary-hero {
+            margin-bottom: 4rem;
+        }
+    }
+
+    .hero-info {
+        position: absolute;
+        background-color: var(--clr-white);
+        bottom: -100px;
+        height: 210px;
+        border-radius: 6px;
+        padding: 5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+        .info {
+            text-align: center;
+
+            .number {
+                font-size: 48px;
+                font-weight: bold;
+                line-height: 62.4px;
+                color: var(--clr-gray-headline);
+            }
+
+            .info-text {
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--clr-brand-green);
+            }
+
+            &.divider {
+                border-left: 1px solid var(--clr-brand-green);
+                border-right: 1px solid var(--clr-brand-green);
+                padding: 0 6rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+            margin: 2.5rem 0;
+
+            .btn {
+                margin: 0 auto;
+            }
+        }
+
+        .hero-info {
+            flex-direction: column;
+            height: max-content;
+            top: 58rem;
+
+            .info {
+                &.divider {
+                    border: none;
+                }
+            }
+        }
+
+        .primary-hero {
+            margin-bottom: 0rem;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .hero-img {
+            max-width: 30rem;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 7rem 0;
+
+    .contact-text {
+        align-self: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h2 {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 52.08px;
+            color: var(--clr-gray-headline);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-text {
+        text-align: center;
+        margin-bottom: 2.5rem;
+
+        ul,
+        a {
+            margin: 0 auto;
+        }
+    }
+}

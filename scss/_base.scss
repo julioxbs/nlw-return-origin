@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --font: 'DM Sans', sans-serif;
+    // Primary Colors
+    --clr-brand-green: hsl(170, 100%, 26%);
+    --clr-brand-light: hsl(148, 23%, 89%);
+    --clr-brand-light-02: hsl(180, 37%, 96%);
+    --clr-brand-beige: hsl(39, 100%, 97%);
+    --clr-brand-green-hover: hsl(170, 100%, 14%);
+    --clr-bg: hsl(0, 0%, 87%);
+    
+    // Secondary Colors
+    --clr-gray-headline: hsl(210, 11%, 15%);
+    --clr-gray-parapraph: hsl(210, 9%, 31%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--font);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+img,
+source {
+    width: 100%;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: max-content;
+    height: 52px;
+    border-radius: 40px;
+    padding: 16px 32px;
+}
+
+.primary {
+    background-color: var(--clr-brand-green);
+    color: var(--clr-white);
+    font-size: 14px;
+    line-height: 18.23px;
+
+    &:hover {
+        background-color: var(--clr-brand-green-hover);
+        transition: background .5s ease;
+    }
+}
+
+.secondary {
+    border: 1px solid var(--clr-brand-green);
+    height: 21px;
+    text-transform: uppercase;
+    color: var(--clr-brand-green);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+
+    &:hover {
+        background-color: var(--clr-brand-green);
+        color: var(--clr-white);
+        transition: background .5s ease;
+    }
+}
+
+.type-section {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--clr-brand-green);
+    text-align: center;
+}
+
+.title-section {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52.08px;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--clr-gray-headline);
+}
